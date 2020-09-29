@@ -1,0 +1,132 @@
+package com.company;
+
+import java.util.*;
+
+public class Deck {
+
+
+public static class Card {
+        String palo;
+        String color;
+        String valor;
+
+
+        public Card(String palo,String valor,String color){
+            super();
+
+            this.palo = palo;
+            this.color = color;
+            this.valor = valor;
+
+        }
+
+
+
+
+    public static void main(String[] args) {
+
+        List<Card> deck = new ArrayList<Card>();
+        class Main {
+
+            public void main ( String[] args ) {
+                Deck deck = new Deck();
+                deck.shuffle(deck.deck);
+                deck.head(deck.deck);
+                deck.pick(deck.deck);
+                deck.hand(deck.deck);
+
+                String a = "";
+            }
+
+            public void shuffle (List<Card> deck){
+                Collections.shuffle(deck);
+                System.out.println("------------------------------");
+                System.out.println("Se mezcló el Deck.");
+                System.out.println("------------------------------\n");
+
+            }
+
+            public void head (List<Card> deck){
+                Card carta = deck.get(0);
+                System.out.println("------------------------------");
+                System.out.println(carta.palo + ", " + carta.color + ", " + carta.valor);
+                deck.remove(carta);
+                System.out.println("Quedan: " + deck.size());
+                System.out.println("------------------------------\n");
+            }
+
+            public void pick (List<Card> deck){
+                Random rand = new Random();
+                Card carta = deck.get(rand.nextInt(deck.size()));
+                System.out.println("------------------------------");
+                System.out.println(carta.palo + ", " + carta.color + ", " + carta.valor);
+                deck.remove(carta);
+                System.out.println("Quedan: " + deck.size());
+                System.out.println("------------------------------\n");
+            }
+
+            public void hand (List<Card> deck){
+                System.out.println("------------------------------");
+                for (int i = 0; i < 5; i++) {
+                    Card carta = deck.get(i);
+                    System.out.println(carta.palo + ", " + carta.color + ", " + carta.valor);
+                    deck.remove(carta);
+                }
+                System.out.println("Quedan: " + deck.size());
+                System.out.println("------------------------------");
+            }
+        }
+        }
+
+
+{
+            String [] colores = {"negro","rojo"};
+    final String[] Valores = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+
+    for (String valor : Valores) {
+        Card carta = new Card ();
+        if ("tréboles" == "tréboles" || "tréboles" == "picas") {
+            carta.color = "negro";
+        } else {
+            carta.color = "rojo";
+        }
+        carta.palo = "tréboles";
+        carta.valor = valor;
+        this.deck.add (carta);
+
+    }
+    for (String valor : Valores) {
+        Card carta = new Card ();
+        if ("picas" == "tréboles" || "picas" == "picas") {
+            carta.color = "negro";
+        } else {
+            carta.color = "rojo";
+        }
+        carta.palo = "picas";
+        carta.valor = valor;
+        this.deck.add (carta);
+
+    }
+    for (String valor : Valores) {
+        Card carta = new Card ();
+        if ("diamantes" == "tréboles" || "diamantes" == "picas") {
+            carta.color = "negro";
+        } else {
+            carta.color = "rojo";
+        }
+        carta.palo = "diamantes";
+        carta.valor = valor;
+        this.deck.add (carta);
+
+    }
+    for (String valor : Valores) {
+        Card carta = new Card ();
+        if ("corazones" == "tréboles" || "corazones" == "picas") {
+            carta.color = "negro";
+        } else {
+            carta.color = "rojo";
+        }
+        carta.palo = "corazones";
+        carta.valor = valor;
+        this.deck.add (carta);
+
